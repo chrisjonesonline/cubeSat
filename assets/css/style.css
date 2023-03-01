@@ -1,0 +1,53 @@
+* {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 2;
+  color: #333;
+  outline: none;
+  -moz-outline: none;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+.flex-item {
+  margin: 1em;
+  text-align: center;
+}
+
+.flex-img {
+  width: clamp(333px, 50%, auto);
+  max-height: 222px;
+  overflow: hidden;
+}
+
+.flex-txt {
+  width: clamp(333px, 50%, auto);
+  height: auto;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 50px;
+  margin-bottom: -5px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
