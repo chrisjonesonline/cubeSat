@@ -3,7 +3,7 @@ error_reporting(E_ERROR|E_PARSE);
 ?>
 <html>
 <head>
-<title>Cube Sat API</title>
+<title>CubeSat</title>
 <link rel='stylesheet' href='assets/css/style.css' />
 </head>
 <body>
