@@ -7,6 +7,17 @@
   -moz-outline: none;
 }
 
+details {
+	margin-bottom: 25px;
+	text-align: center;
+	width: 100%;
+} details:hover {
+	cursor: default!important;
+} summary:hover {
+	cursor: pointer;
+
+}
+
 .flex-container {
   display: flex;
   align-items: center;
