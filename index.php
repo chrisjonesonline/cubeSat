@@ -39,14 +39,15 @@ echo "<div class='flex-container'>";
 //(Debugging:) Dump Telemetry Data
 
 // Specify the path to the CSV file
-$csvFile = 'assets/telemetries/CubeSatSim_maxtelemetry.csv'; // TODO: Create a dynamic call to the required CSV telemetry file
+$csvFile = 'assets/telemetries/CubeSatSim_maxtelemetry.csv'; // Name of file
 
 // Open the CSV file for reading
 $fileHandle = fopen($csvFile, 'r');
 
 // Read the contents of the CSV file and display them
 if ($fileHandle !== false) {
-    echo '<br />';
+    echo 'TODO: Create a dynamic call to the required CSV telemetry file (E.g. foreach loop) Then Hide this debugging menu and call to required telemetries. Convert to .js w/ chatGPT if needed.';
+	echo '<br />';
     echo '<details>';
     echo '<summary><strong>' . 'Telemetry API Call: ' . basename($csvFile, ".csv") . '</strong></summary>';
     
