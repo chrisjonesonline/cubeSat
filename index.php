@@ -18,10 +18,10 @@ $api = ($url . $apiKey[$arrayInput]); //get api call from user input
 $json = file_get_contents($api);
 $array = json_decode($json, true);
 
-//API Array Information (Debugging)
-// echo '<details><summary>API Array Information</summary>';
-// var_dump($array);
-// echo '</details>';
+// (Debugging:) Dump API Array Information
+#echo '<details><summary>API Array Information</summary>';
+#var_dump($array);
+#echo '</details>';
 
 echo "
 <div class='center'>
@@ -35,6 +35,36 @@ echo "
 ";
 
 echo "<div class='flex-container'>";
+
+//(Debugging:) Dump Telemetry Data
+
+// Specify the path to the CSV file
+$csvFile = 'assets/telemetries/RadFxSat_maxtelemetry.csv'; // TODO: Create a dynamic call to the required .CSV telemetry file/CSV
+
+// Open the CSV file for reading
+$fileHandle = fopen($csvFile, 'r');
+
+// Read the contents of the CSV file and display them
+if ($fileHandle !== false) {
+    echo '<br />';
+    echo '<details>';
+    echo '<summary><strong>' . 'Telemetry API Call: ' . basename($csvFile, ".csv") . '</strong></summary>';
+    
+    while (($data = fgetcsv($fileHandle, 1000, ',')) !== false) {
+        // $data is an array containing the values for each row in the CSV file
+        // Do something with $data, such as displaying it on the screen
+        echo implode(',', $data);
+    }
+    
+    echo '</details>';
+
+    // Close the file handle
+    fclose($fileHandle);
+} else {
+    echo 'Failed to open file: ' . $csvFile;
+}
+
+echo '<br /><br />';
 
 foreach ($array as $object) {
 	
@@ -56,17 +86,19 @@ foreach ($array as $object) {
 		}} else {
 			$image = 'https://imgs.search.brave.com/jdfgo5AXBDB5xhLbdRCKhwyOhEv3H5XRy7wsc4NGlek/rs:fit:800:600:1/g:ce/aHR0cHM6Ly9zcGFj/ZWZsaWdodDEwMS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDkvYnBjX3Bs/ZWlhZGVzLXNhdGVs/bGl0ZS1pbGx1c3Ry/YXRpb25fcDMxMDc5/LmpwZw';
 		}
-	echo "
-		<div class='flex-item'>
-		<img class='flex-img' src='$image'>
-			<div class='flex-txt'>
-				<strong>Satellite ID:</strong> $id <br />
-				<strong>Name:</strong> $name <br />
-				<strong>Launch Date:</strong> $launchDate <br />
-				<strong>Status:</strong> $status
-			</div>
+
+echo "
+	<div class='flex-item'>
+	<img class='flex-img' src='$image'>
+		<div class='flex-txt'>
+			<strong>Satellite ID:</strong> $id <br />
+			<strong>Name:</strong> $name <br />
+			<strong>Launch Date:</strong> $launchDate <br />
+			<strong>Status:</strong> $status
 		</div>
-	";
+	</div>
+";
+
 }
 
 echo "</div>";
