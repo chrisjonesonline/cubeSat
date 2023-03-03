@@ -46,9 +46,11 @@ $fileHandle = fopen($csvFile, 'r');
 
 // Read the contents of the CSV file and display them
 if ($fileHandle !== false) {
-    echo 'TODO: Pull every required telemetry file (e.g. use foreach loop) Then hide this debugging menu and call to required telemetries per satellite.';
+    echo 'TODO 1: Pull every required telemetry file (e.g. use foreach loop) Then hide this debugging menu and call to required telemetries per satellite.';
 	echo '<br />';
-    echo '<details>';
+    echo 'TODO 2: Add some CSS to make it pretty if you care enough.';
+	echo '<br />';
+	echo '<details>';
     echo '<summary><strong>' . 'Telemetry API Call: ' . basename($csvFile, ".csv") . '</strong></summary>';
     
     while (($data = fgetcsv($fileHandle, 1000, ',')) !== false) {
