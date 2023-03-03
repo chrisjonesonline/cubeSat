@@ -39,7 +39,7 @@ echo "<div class='flex-container'>";
 //(Debugging:) Dump Telemetry Data
 
 // Specify the path to the CSV file
-$csvFile = 'assets/telemetries/RadFxSat_maxtelemetry.csv'; // TODO: Create a dynamic call to the required .CSV telemetry file/CSV
+$csvFile = 'assets/telemetries/RadFxSat_maxtelemetry.csv'; // TODO: Create a dynamic call to the required CSV telemetry file
 
 // Open the CSV file for reading
 $fileHandle = fopen($csvFile, 'r');
