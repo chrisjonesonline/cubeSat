@@ -39,19 +39,18 @@ echo "<div class='flex-container'>";
 //(Debugging:) Dump Telemetry Data
 
 // Specify the path to the CSV file
-$csvFile = 'assets/telemetries/CubeSatSim_maxtelemetry.csv'; // Name of file
+// TODO: Create a more well formed request (e.g. foreach loop to retreive telemetries instead of hardcoding them in)
+
+
+$csvFile = 'assets/telemetries/CubeSatSim_maxtelemetry.csv'; // IMPORTANT!
+
 
 // Open the CSV file for reading
 $fileHandle = fopen($csvFile, 'r');
 
 // Read the contents of the CSV file and display them
 if ($fileHandle !== false) {
-    echo 'TODO 1: Pull every required telemetry file (e.g. use foreach loop) Then hide this debugging menu and call to required telemetries per satellite.';
-	echo '<br />';
-    echo 'TODO 2: Add some CSS to make it pretty if you care enough.';
-	echo '<br />';
-	echo '<details>';
-    echo '<summary><strong>' . 'Telemetry API Call: ' . basename($csvFile, ".csv") . '</strong></summary>';
+	echo '<details><summary><strong>' . 'Telemetry API Call: ' . basename($csvFile, ".csv") . '</strong></summary>';
     
     while (($data = fgetcsv($fileHandle, 1000, ',')) !== false) {
         // $data is an array containing the values for each row in the CSV file
