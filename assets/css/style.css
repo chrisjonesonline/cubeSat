@@ -14,13 +14,13 @@ body {
 }
 
 details {
-	margin-bottom: 40px;
-	text-align: center;
-	width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 100%;
 } details:hover {
-	cursor: default!important;
+  cursor: default!important;
 } summary:hover {
-	cursor: pointer;
+  cursor: pointer;
 
 }
 
