@@ -2,9 +2,15 @@
   font-family: arial, helvetica, sans-serif;
   font-size: 1em;
   line-height: 2;
-  color: #333;
+  color: #fff;
   outline: none;
   -moz-outline: none;
+}
+
+body {
+  background-image: url('http://wallpapercave.com/wp/JzfvVHJ.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 details {
