@@ -25,7 +25,7 @@ $array = json_decode($json, true);
 
 echo "
 <div class='center'>
-	<form method='post'>a
+	<form method='post'>
 		<input class='btn' type='submit' name='input' value='0' />
 		<input class='btn' type='submit' name='input' value='1' />
 		<input class='btn' type='submit' name='input' value='2' />
