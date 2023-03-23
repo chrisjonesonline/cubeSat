@@ -100,7 +100,7 @@ echo "
 			<strong>Name:</strong> $name <br />
 			<strong>Launch Date:</strong> $launchDate <br />
 			<strong>Status:</strong> $status <br />
-      <a class='btn' href='$website' target='_blank'>Information</a>
+      			<a class='btn' href='$website' target='_blank'>Information</a>
 		</div>
 	</div>
 ";
