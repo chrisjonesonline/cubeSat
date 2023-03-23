@@ -36,13 +36,15 @@ echo "
 
 echo "<div class='flex-container'>";
 
+echo "<a href='https://fox1e.anthonycucinell.repl.co'>Fox 1E Azusa Pacific CubeSat Team</a>";
+
 //(Debugging:) Dump Telemetry Data
 
 // Specify the path to the CSV file
 // TODO: Create a more well formed request (e.g. foreach loop to retreive telemetries instead of hardcoding them in)
 
 
-$csvFile = 'assets/telemetries/CubeSatSim_maxtelemetry.csv'; // IMPORTANT!
+$csvFile = 'assets/telemetries/FOX1E_rttelemetry.csv'; // IMPORTANT!
 
 
 // Open the CSV file for reading
@@ -88,6 +90,7 @@ foreach ($array as $object) {
 		}} else {
 			$image = 'https://imgs.search.brave.com/jdfgo5AXBDB5xhLbdRCKhwyOhEv3H5XRy7wsc4NGlek/rs:fit:800:600:1/g:ce/aHR0cHM6Ly9zcGFj/ZWZsaWdodDEwMS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDkvYnBjX3Bs/ZWlhZGVzLXNhdGVs/bGl0ZS1pbGx1c3Ry/YXRpb25fcDMxMDc5/LmpwZw';
 		}
+  $website = $object['website'];
 
 echo "
 	<div class='flex-item'>
@@ -96,7 +99,8 @@ echo "
 			<strong>Satellite ID:</strong> $id <br />
 			<strong>Name:</strong> $name <br />
 			<strong>Launch Date:</strong> $launchDate <br />
-			<strong>Status:</strong> $status
+			<strong>Status:</strong> $status <br />
+      <a class='btn' href='$website' target='_blank'>Information</a>
 		</div>
 	</div>
 ";
