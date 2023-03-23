@@ -25,7 +25,7 @@ $array = json_decode($json, true);
 
 echo "
 <div class='center'>
-	<form method='post'>
+	<form method='post'>a
 		<input class='btn' type='submit' name='input' value='0' />
 		<input class='btn' type='submit' name='input' value='1' />
 		<input class='btn' type='submit' name='input' value='2' />
@@ -36,7 +36,7 @@ echo "
 
 echo "<div class='flex-container'>";
 
-echo "<a href='https://fox1e.anthonycucinell.repl.co'>Fox 1E Azusa Pacific CubeSat Team</a>";
+echo "<a class='btn' href='https://fox1e.anthonycucinell.repl.co' target='_blank'>Fox 1E Azusa Pacific CubeSat Team</a>";
 
 //(Debugging:) Dump Telemetry Data
 
