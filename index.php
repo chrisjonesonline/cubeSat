@@ -18,7 +18,7 @@ $imgUrl = "https://db-satnogs.freetls.fastly.net/media/";
 $url = "https://db.satnogs.org/api/satellites/";
 $apiKey = array("?norad_cat_id=&status=dead&in_orbit=&sat_id=", /* [0] DEAD */ "?norad_cat_id=&status=alive&in_orbit=&sat_id=", /* [1] ALIVE */ "?norad_cat_id=&status=future&in_orbit=&sat_id=") /* [2] FUTURE */;
 $arrayInput = isset($_POST["input"]) ? $_POST["input"] : 0;
-$api = ($url . $apiKey[$arrayInput]); //get api call from user input
+$api = ($url . $apiKey[$arrayInput]);
 $json = file_get_contents($api);
 $array = json_decode($json, true);
 
@@ -37,7 +37,7 @@ $array = json_decode($json, true);
 //include_once("telemetries.php");
 
 ##########################################
-### Start Get API Call from user input ###
+### Print user selected API call (DEAD, ALIVE, FUTURE) ###
 ##########################################
 
 echo "
@@ -55,9 +55,9 @@ echo "<div class='flex-container'>";
 
 echo "<br /><br />";
 
-########################################################################
-### Start foreach loop to print (Dead, Alive or Future) satellite(s) ###
-########################################################################
+######################################################################
+### Start foreach loop to print (DEAD, ALIVE, FUTURE) satellite(s) ###
+######################################################################
 
 foreach ($array as $object) {
 	
@@ -80,6 +80,10 @@ foreach ($array as $object) {
 			$image = "https://imgs.search.brave.com/jdfgo5AXBDB5xhLbdRCKhwyOhEv3H5XRy7wsc4NGlek/rs:fit:800:600:1/g:ce/aHR0cHM6Ly9zcGFj/ZWZsaWdodDEwMS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDkvYnBjX3Bs/ZWlhZGVzLXNhdGVs/bGl0ZS1pbGx1c3Ry/YXRpb25fcDMxMDc5/LmpwZw";
 		}
   $website = $object["website"];
+
+##########################
+### Print foreach loop ###
+##########################
 
 echo "
 	<div class='flex-item'>
