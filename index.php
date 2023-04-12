@@ -79,7 +79,11 @@ foreach ($array as $object) {
 		}} else {
 			$image = "https://imgs.search.brave.com/jdfgo5AXBDB5xhLbdRCKhwyOhEv3H5XRy7wsc4NGlek/rs:fit:800:600:1/g:ce/aHR0cHM6Ly9zcGFj/ZWZsaWdodDEwMS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDkvYnBjX3Bs/ZWlhZGVzLXNhdGVs/bGl0ZS1pbGx1c3Ry/YXRpb25fcDMxMDc5/LmpwZw";
 		}
-  $website = $object["website"];
+  if (!empty($object["website"])) {
+    $website = $object["website"];
+} else {
+    $website = '#';
+}
 
 ##########################
 ### Print foreach loop ###
@@ -93,7 +97,7 @@ echo "
 			<strong>Name:</strong> $name <br />
 			<strong>Launch Date:</strong> $launchDate <br />
 			<strong>Status:</strong> $status <br />
-      			<a class='btn' href='$website' target='_blank'>Information</a>
+      			<a class='btn' href='$website'>Information</a>
 		</div>
 	</div>
 ";
