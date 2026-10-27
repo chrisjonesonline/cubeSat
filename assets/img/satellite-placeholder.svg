@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Satellite image unavailable">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111a28"/><stop offset="1" stop-color="#070b11"/></linearGradient>
+    <linearGradient id="panel" x1="0" x2="1"><stop stop-color="#5e91c8"/><stop offset="1" stop-color="#315b8c"/></linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <g fill="#fff" opacity=".18"><circle cx="120" cy="90" r="2"/><circle cx="815" cy="105" r="1.5"/><circle cx="735" cy="390" r="2"/><circle cx="220" cy="410" r="1"/><circle cx="615" cy="75" r="1"/></g>
+  <g transform="translate(480 270) rotate(-12)">
+    <rect x="-70" y="-55" width="140" height="110" rx="14" fill="#b8c4d2"/><rect x="-48" y="-35" width="96" height="70" rx="8" fill="#7c8998"/>
+    <rect x="-270" y="-62" width="180" height="124" rx="5" fill="url(#panel)"/><rect x="90" y="-62" width="180" height="124" rx="5" fill="url(#panel)"/>
+    <g stroke="#a9d3ff" stroke-width="3" opacity=".45"><path d="M-225-62v124M-180-62v124M-135-62v124M135-62v124M180-62v124M225-62v124"/><path d="M-270 0h180M90 0h180"/></g>
+    <path d="M0-55V-115" stroke="#d7e1ec" stroke-width="8"/><circle cy="-124" r="14" fill="#d7e1ec"/>
+  </g>
+  <text x="480" y="450" text-anchor="middle" fill="#91a0b2" font-family="system-ui,sans-serif" font-size="22">IMAGE UNAVAILABLE</text>
+</svg>
